@@ -47,7 +47,7 @@ function Berita() {
   </div>
   <div class="item-5">
     <a href="https://design.tutsplus.com/tutorials/stranger-things-inspired-text-effect--cms-27139" class="card">
-    <div className="thumb" style={{backgroundImage: "url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/flex-1.jpg)"}}></div>
+    <div className="thumb" style={{backgroundImage: `url(${errorimg})`}}></div>
       <article>
         <h1 className="judul">How to Create a “Stranger Things” Text Effect in Adobe Photoshop</h1>
         <span className="nama">Rose</span>
@@ -56,7 +56,7 @@ function Berita() {
   </div>
   <div class="item-6">
     <a href="https://photography.tutsplus.com/articles/5-inspirational-business-portraits-and-how-to-make-your-own--cms-27338" class="card">
-    <div className="thumb" style={{backgroundImage: "url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/flex-1.jpg)"}}></div>
+    <div className="thumb" style={{backgroundImage: `url(${errorimg})`}}></div>
       <article>
         <h1 className="judul">5 Inspirational Business Portraits and How to Make Your Own</h1>
         <span className="nama">Marie Gardiner</span>
@@ -65,7 +65,7 @@ function Berita() {
   </div>
   <div class="item-7">
     <a href="https://webdesign.tutsplus.com/articles/notes-from-behind-the-firewall-the-state-of-web-design-in-china--cms-22281" class="card">
-    <div className="thumb" style={{backgroundImage: "url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/flex-1.jpg)"}}></div>
+    <div className="thumb" style={{backgroundImage: `url(${errorimg})`}}></div>
       <article>
         <h1 className="judul">Notes From Behind the Firewall: The State of Web Design in China</h1>
         <span className="nama">Kendra Schaefer</span>

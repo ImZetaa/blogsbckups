@@ -11,7 +11,7 @@ function Kotak_Saran() {
       "anjing", "bangsat", "kontol", "memek", "bajingan", "yatim",
       "jancok", "jancuk", "ndhasmu", "raimu", "picek", "budeg",
       "budheg", "gendheng", "goblog", "asu", "cangkeme", "matane",
-      "matamu", "bodoh", "noob" , "bokep"
+      "matamu", "bodoh", "noob" , "bokep" , "ajg" , "tai" , "ytm" 
     ]; // Daftar kata-kata kasar
     for (let i = 0; i < kataKasar.length; i++) {
       const kata = kataKasar[i];

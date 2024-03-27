@@ -62,7 +62,7 @@ function Navbars() {
                 <Camera />
                 <span>ARSIP DOKUMENTASI</span>
               </Nav.Link>
-              <Nav.Link href="https://smkn1adw.sch.id/fp/" className="nav-link-icon" onClick={closeNavbar}>
+              <Nav.Link href="https://smkn1adw.sch.id/fp/" className="nav-link-icon" id="navbarScrollingDropdown" onClick={closeNavbar}>
                 <Mortarboard />
                 <span>PROFIL SEKOLAH KAMI</span>
               </Nav.Link>
@@ -70,7 +70,7 @@ function Navbars() {
             <Form className="d-flex">
               <Form.Control
                 type="search"
-                placeholder="Cari..."
+                placeholder="Pencarian"
                 className="me-2"
                 aria-label="Search"
               />
