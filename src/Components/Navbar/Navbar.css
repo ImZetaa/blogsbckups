@@ -1,0 +1,18 @@
+.navbar-nav {
+    margin: 0 auto; /* Membuat navbar-nav menjadi flex dan menengahkan elemen-elemen */
+    display: flex;
+    align-items: left;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+
+  .nav-link-icon svg {
+    margin-right: 5px; /* Atur margin antara ikon dan teks */
+    flex-shrink: 0; /* Hindari ikon untuk menyusut */
+    width: 20px; /* Ukuran ikon */
+    height: 20px;
+    margin-top: -3px;
+  }
+
+
+
