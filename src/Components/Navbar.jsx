@@ -6,7 +6,7 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import Logo from '../Pages/img/Logo.png';
 import { Link } from "react-router-dom";
-import { House, HouseFill, Newspaper, Mortarboard, PersonVcard, BoxSeam, Images, ExclamationOctagonFill, ExclamationOctagon, BoxSeamFill } from "react-bootstrap-icons";
+import { House, HouseFill, Newspaper, Mortarboard, PersonVcard, BoxSeam, Image, ExclamationOctagonFill, ExclamationOctagon, BoxSeamFill, PersonVcardFill, ImageFill } from "react-bootstrap-icons";
 
 // Elemen CSS
 import './Navbar/Navbar.css';
@@ -18,6 +18,9 @@ function Navbars() {
   const [isWarningActive, setIsWarningActive] = useState(false);
   const [isBoxActive, setIsBoxActive] = useState(false);
   const [isHouseActive, setIsHouseActive] = useState(false);
+  const [isVcardActive, setIsVcardActive] = useState(false);
+  const [isImageActive, setIsImageActive] = useState(false);
+
 
   useEffect(() => {
     const handleUnload = () => {
@@ -36,29 +39,54 @@ function Navbars() {
     setIsWarningActive(false); // Reset ikon peringatan saat menutup navbar
     setIsBoxActive(false); // Reset ikon kotak saran saat menutup navbar
     setIsHouseActive(false);
+    setIsVcardActive(false);
+    setIsImageActive(false);
   };
 
   const handleWarningSelect = () => {
     setIsWarningActive(true);
     setIsBoxActive(false); // Menonaktifkan ikon kotak saran jika sebelumnya aktif
     setIsHouseActive(false);
+    setIsVcardActive(false);
+    setIsImageActive(false);
     setExpanded(false); // Menutup navbar saat salah satu link diklik
   };
 
   const handleBoxSelect = () => {
     setIsBoxActive(true);
     setIsHouseActive(false);
+    setIsVcardActive(false);
+    setIsImageActive(false);
     setIsWarningActive(false); // Menonaktifkan ikon peringatan jika sebelumnya aktif
     setExpanded(false); // Menutup navbar saat salah satu link diklik
   };
 
   const handleHouseSelect = () => {
     setIsHouseActive(true);
+    setIsImageActive(false);
     setIsBoxActive(false);
     setIsWarningActive(false); // Menonaktifkan ikon peringatan jika sebelumnya aktif
     setExpanded(false); // Menutup navbar saat salah satu link diklik
+    setIsVcardActive(false);
+  };
+
+  const handleVcardSelect = () => {
+    setIsVcardActive(true);
+    setIsImageActive(false);
+    setIsWarningActive(false);
+    setIsBoxActive(false); // Menonaktifkan ikon kotak saran jika sebelumnya aktif
+    setIsHouseActive(false);
+    setExpanded(false); // Menutup navbar saat salah satu link diklik
   };
   
+  const handleImageSelect = () => {
+    setIsImageActive(true);
+    setIsVcardActive(false);
+    setIsWarningActive(false);
+    setIsBoxActive(false); // Menonaktifkan ikon kotak saran jika sebelumnya aktif
+    setIsHouseActive(false);
+    setExpanded(false); // Menutup navbar saat salah satu link diklik
+  };
 
   return (
     <div>
@@ -97,7 +125,7 @@ function Navbars() {
                 <Newspaper />
                 <span>BERITA</span>
               </Nav.Link>
-              <Nav.Link as={Link} to="/" className="nav-link-icon" onClick={handleWarningSelect}>
+              <Nav.Link as={Link} to="/Peringatan" className="nav-link-icon" onClick={handleWarningSelect}>
                 {isWarningActive ? <ExclamationOctagonFill /> : <ExclamationOctagon />}
                 <span>PERINGATAN</span>
               </Nav.Link>
@@ -105,12 +133,11 @@ function Navbars() {
                 {isBoxActive ? <BoxSeamFill /> : <BoxSeam />}
                 <span>KOTAK SARAN</span>
               </Nav.Link>
-              <Nav.Link as={Link} to="/Tentang-Kami" className="nav-link-icon" onClick={closeNavbar}>
-                <PersonVcard />
-                <span>PENGURUS OSIS</span>
+              <Nav.Link as={Link} to="/Tentang-Kami" className="nav-link-icon" onClick={handleVcardSelect}>
+                {isVcardActive ? <PersonVcardFill /> : <PersonVcard /> } <span>PENGURUS OSIS</span>
               </Nav.Link>
-              <Nav.Link as={Link} to="/Dokumentasi" className="nav-link-icon" onClick={closeNavbar}>
-                <Images />
+              <Nav.Link as={Link} to="/Galeri" className="nav-link-icon" onClick={handleImageSelect}>
+                {isImageActive ? <ImageFill /> : <Image /> }
                 <span>GALERI</span>
               </Nav.Link>
               <Nav.Link href="https://smkn1adw.sch.id/fp/" className="nav-link-icon" id="navbarScrollingDropdown" onClick={closeNavbar}>

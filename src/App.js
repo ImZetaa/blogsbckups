@@ -7,9 +7,10 @@ import Navbars from "./Components/Navbar";
 // Pages
 import Beranda from "./Pages/Beranda";
 import Berita from "./Pages/Berita";
-import Dokumentasi from "./Pages/Dokumentasi";
+import Galeri from "./Pages/Galeri";
 import Tentang from "./Pages/Tentang-Kami";
 import Kotak_Saran from "./Pages/Kotak-Saran";
+import Peringatan from "./Pages/Peringatan";
 
 
 
@@ -24,12 +25,13 @@ function App() {
 
           <Route path="/Berita" exact element={<Berita />} />
 
-          <Route path="/Dokumentasi" exact element={<Dokumentasi />} />
+          <Route path="/Galeri" exact element={<Galeri />} />
 
           <Route path="/Tentang-Kami" exact element={<Tentang />} />
 
           <Route path="/Kotak-Saran" exact element={<Kotak_Saran />} />
 
+          <Route path="/Peringatan" exact element={<Peringatan />} />
 
         </Routes>
       </BrowserRouter>
